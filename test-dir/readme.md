@@ -2,13 +2,13 @@
 Examples of 
 [markdown syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax/).
 
-# Header  1
+# Header 1
 ## Header 1.1
 
 A link
 [markdown syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax/).
 
-# Header  2
+# Header 2
 ## Header 2.1
 
 ### Styling text

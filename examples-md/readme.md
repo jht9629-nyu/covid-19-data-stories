@@ -8,8 +8,8 @@ Examples of
 A link
 [markdown syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax/).
 
-# Header 2
-## Header 2.1
+# Header 2 COVID 19 Project
+## Header 2.1 COVID 19 Dashboard
 
 ### Styling text
 

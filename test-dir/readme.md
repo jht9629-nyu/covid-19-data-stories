@@ -2,11 +2,14 @@
 Examples of 
 [markdown syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax/).
 
-# Header Level 1
-## Header Level 1
+# Header  1
+## Header 1.1
 
 A link
 [markdown syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax/).
+
+# Header  2
+## Header 2.1
 
 ### Styling text
 
@@ -16,18 +19,22 @@ A link
 
 _This text is italicized_
 
+### Quoted text
+
 > This is quoted text
+
+## Header 2.2
 
 ### unordered list
 
-- George Washington
-- John Adams
-- Thomas Jefferson
+- Apples are sliced
+- Bananas are nibbled
+- Cherries are eated
 
 ### ordered list
 
-1. George Washington
-2. John Adams
-3. Thomas Jefferson
+1. Apples one
+2. Bananas two
+3. Cherries three
 
 

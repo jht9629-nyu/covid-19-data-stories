@@ -1,4 +1,7 @@
-This is a test
+
+Examples of 
+[markdown syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax/).
+
 # Header Level 1
 ## Header Level 1
 

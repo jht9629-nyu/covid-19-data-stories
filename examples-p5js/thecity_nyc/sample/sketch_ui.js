@@ -1,5 +1,8 @@
 function sketch_ui() {
   {
+    createSpan('0.1');
+  }
+  {
     let btn = createButton('Full');
     btn.mousePressed(function () {
       toggleFullScreen();
@@ -25,6 +28,7 @@ function sketch_ui() {
     elm.attribute('target', '_blank');
     elm.style('font-size', '20px');
   }
+  createP();
   {
     let elm = createSpan().id('msg');
     elm.style('font-size', '20px');

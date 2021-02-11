@@ -23,6 +23,12 @@ function sketch_ui() {
     });
   }
   {
+    let btn = createButton('monoc');
+    btn.mousePressed(function () {
+      a_monoc = !a_monoc;
+    });
+  }
+  {
     let hsrc = 'https://projects.thecity.nyc/covid-19-deaths/';
     let elm = createA(hsrc, ' Source of images: ' + hsrc);
     elm.attribute('target', '_blank');
@@ -36,6 +42,10 @@ function sketch_ui() {
   createP();
 }
 
+function ui_panel() {
+  load_index = 0;
+  tint_index = 0;
+}
 function show_text(label, text) {
   let elm = select('#' + label);
   elm.html(text);

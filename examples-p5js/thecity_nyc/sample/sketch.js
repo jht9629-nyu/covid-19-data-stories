@@ -5,13 +5,15 @@ let a_run = 1;
 let a_fast = 0;
 let a_fast_n = 30;
 let images_prefix = './images/';
+let a_monoc = 1;
 
 function setup() {
   createCanvas(800, 800);
   pixelDensity(1);
   a_recs = [];
   frameRate(1);
-  background(255);
+  background(0);
+  // background(255);
   sketch_ui();
 }
 
@@ -39,9 +41,21 @@ function load_next() {
 function load_image(rec) {
   loadImage(rec.fpath, (img) => {
     console.log(a_recs.length, 'loadImage', rec.fpath);
+    if (a_monoc) mono_img(img);
     rec.img = img;
     a_recs.push(rec);
   });
+}
+
+function mono_img(img) {
+  img.loadPixels();
+  for (i = 0; i < img.pixels.length; i += 4) {
+    let avg = (img.pixels[i] + img.pixels[i + 1] + img.pixels[i + 2]) / 3;
+    img.pixels[i] = avg;
+    img.pixels[i + 1] = avg;
+    img.pixels[i + 2] = avg;
+  }
+  img.updatePixels();
 }
 
 function tint_next() {

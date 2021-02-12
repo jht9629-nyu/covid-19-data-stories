@@ -1,19 +1,11 @@
 #
 
-Animating raw numbers
+Visualizing numbers
 
-add point animation to c_data slider
-render c_data at levels world / country / state / county
-basic --> generalized solution
-use ui elements to explore data
-
-[ ] add point animation to c_data slider
-
-[] render c_data at levels world / country / state / county
-
-[] basic --> generalized solution
-
-[] use ui elements to explore data
+- [ ] add point animation to c_data slider
+- [ ] render c_data at levels world / country / state / county
+- [ ] basic --> generalized solution
+- [ ] use ui elements to explore data
 
 https://editor.p5js.org/aferriss/sketches/B1BOfBdZX
 Text To Points Examples

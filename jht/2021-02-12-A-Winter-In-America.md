@@ -2,7 +2,9 @@
 
 # Approaching 500,000 deaths from COVID-19 in the United States of North America.
 
-```
+Numbers extracted from the [Covid-19 Impact Dashboard](https://epvisual.com/COVID-19-Impact/Dashboard)
+
+``
 475,444 United States Deaths to date 2021-02-11
 
 452,114 United States Deaths to date 2021-02-03

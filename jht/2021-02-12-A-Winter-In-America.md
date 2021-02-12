@@ -7,7 +7,7 @@
 452,114 United States Deaths to date 2021-02-03  
 400,363 United States Deaths to date 2021-01-18  
 351,465 United States Deaths to date 2021-01-02  
-300,420 United States Deaths to date 2020-12-13
+300,420 United States Deaths to date 2020-12-13  
 251,355 United States Deaths to date 2020-11-18  
 200,974 United States Deaths to date 2020-09-22  
 150,767 United States Deaths to date 2020-07-29  

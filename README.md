@@ -4,3 +4,5 @@
 
 - Hello from jht1493
 - Hello from smj2
+
+# [Course Overview](./COVID-19-NYU-ITP-Course-Overview.pdf)

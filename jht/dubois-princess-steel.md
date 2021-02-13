@@ -9,6 +9,8 @@ Earlier titled "The Megascope: A Tale of Tales."
 Envisions VR-like device to expose the "Great Near".
 Uses data driven visual projection to show "the epic timescale of capitalism"
 
+[The Princess Steel](./dubois-princess-steel.pdf)
+
 - http://racialcapitalism.ucdavis.edu/wp-content/uploads/2019/01/dubois-princess-steel.pdf
 
 - https://www.semanticscholar.org/paper/The-Princess-Steel-Bois-Brown/029f993d65aaed097c827bd20eb3ed4af6c7a56e

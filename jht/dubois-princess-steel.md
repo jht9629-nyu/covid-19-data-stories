@@ -6,8 +6,8 @@
 
 Earlier titled "The Megascope: A Tale of Tales."
 
-Envisions VR-like device to expose the "Great Near",
-using data driven visual projection to show "the epic timescale of capitalism"
+Envisions VR-like device to expose the "Great Near".
+Uses data driven visual projection to show "the epic timescale of capitalism"
 
 - http://racialcapitalism.ucdavis.edu/wp-content/uploads/2019/01/dubois-princess-steel.pdf
 

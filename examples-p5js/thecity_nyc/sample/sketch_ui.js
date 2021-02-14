@@ -26,6 +26,7 @@ function sketch_ui() {
     let btn = createButton('monoc');
     btn.mousePressed(function () {
       a_monoc = !a_monoc;
+      load_reset();
     });
   }
   {

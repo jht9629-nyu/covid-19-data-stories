@@ -1,16 +1,15 @@
-let a_recs;
+let a_recs = [];
 let load_index = 0;
 let tint_index = 0;
 let a_run = 1;
 let a_fast = 0;
 let a_fast_n = 30;
 let images_prefix = './images/';
-let a_monoc = 1;
+let a_monoc = 0;
 
 function setup() {
   createCanvas(800, 800);
   pixelDensity(1);
-  a_recs = [];
   frameRate(1);
   background(0);
   // background(255);
@@ -25,6 +24,7 @@ function draw() {
 
 function load_next() {
   if (load_index >= a_refs.length) {
+    load_reset();
     return;
   }
   let rec = a_refs[load_index];
@@ -36,6 +36,14 @@ function load_next() {
     rec.himg = createImg(rec.fpath, 'image');
     load_image(rec);
   }
+}
+
+function load_reset() {
+  removeElements();
+  a_recs = [];
+  load_index = 0;
+  tint_index = 0;
+  sketch_ui();
 }
 
 function load_image(rec) {

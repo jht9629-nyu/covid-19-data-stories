@@ -1,7 +1,16 @@
 function sketch_ui() {
-  // {
-  //   createSpan('0.1');
-  // }
+  {
+    let elm = createSpan().id('msg');
+    elm.style('font-size', '20px');
+  }
+  createP();
+  {
+    let hsrc = 'https://projects.thecity.nyc/covid-19-deaths/';
+    let elm = createA(hsrc, ' Source of images: ' + hsrc);
+    elm.attribute('target', '_blank');
+    elm.style('font-size', '20px');
+  }
+  createP();
   {
     let btn = createButton('Full');
     btn.mousePressed(function () {
@@ -28,17 +37,6 @@ function sketch_ui() {
       a_monoc = !a_monoc;
       load_reset();
     });
-  }
-  {
-    let hsrc = 'https://projects.thecity.nyc/covid-19-deaths/';
-    let elm = createA(hsrc, ' Source of images: ' + hsrc);
-    elm.attribute('target', '_blank');
-    elm.style('font-size', '20px');
-  }
-  createP();
-  {
-    let elm = createSpan().id('msg');
-    elm.style('font-size', '20px');
   }
   createP();
 }

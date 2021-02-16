@@ -51,8 +51,9 @@ function draw_next() {
   fade_index = fade_count;
   let rec = a_recs[tint_index];
   tint_index += step;
-  let tval = map(fade_index, 0, fade_count, 0, 255);
+  // let tval = map(fade_index, 0, fade_count, 0, 255);
   // tint(255, tval);
+  tint(255, 50);
 
   mask_img(rec.img);
 
@@ -85,7 +86,8 @@ function mask_img(img) {
     let x = map(mouseX,0,width,0,img.width,true);
     let y = map(mouseY,0,height,0,img.height,true);
     m_layer.fill(255, 255, 255, 255);
-    m_layer.ellipse(x, y, w, h);
+    m_layer.rect(x-w/2, y-h/2, w, h);
+    // m_layer.ellipse(x, y, w, h);
   }
 
   let img2 = img.get();

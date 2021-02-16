@@ -72,8 +72,9 @@ function mask_img(img) {
     m_layer = createGraphics(img.width, img.height);
   }
   if (mouseIsPressed) {
-    console.log('mouseIsPressed');
+    // console.log('mouseIsPressed');
     m_layer = createGraphics(img.width, img.height);
+    // tint_index = (tint_index + 1) % a_recs.length;
     // m_layer.strokeWeight(0);
     // m_layer.fill(0, 0, 0, 0);
     // m_layer.rect(0,0,img.width,img.height);

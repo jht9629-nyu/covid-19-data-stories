@@ -10,7 +10,7 @@ Lost Parents Due to COVID, Need Funds for College
 $91,148 raised of $100,000 goal
 $91,248 raised of $100,000 goal 2021-02-26 Fr
 ```
-https://projects.thecity.nyc/covid-19-deaths/?utm_campaign=mailchimp&utm_source=daily&utm_medium=newsletter#loida-tobias
+https://projects.thecity.nyc/covid-19-deaths/#loida-tobias
 
 https://www.ny1.com/nyc/all-boroughs/news/2020/07/21/queens-teen-loses-both-parents-to-covid-19-in-one-month
 

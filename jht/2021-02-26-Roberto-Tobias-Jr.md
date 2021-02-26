@@ -14,7 +14,9 @@ https://projects.thecity.nyc/covid-19-deaths/?utm_campaign=mailchimp&utm_source=
 
 https://www.ny1.com/nyc/all-boroughs/news/2020/07/21/queens-teen-loses-both-parents-to-covid-19-in-one-month
 
-> QUEENS, N.Y. - Seventeen year-old Roberto Tobias Jr. thinks a lot about his parents these days. His mom, Loida, was a nurse at Harlem Hospital.
+> QUEENS, N.Y. - Seventeen year-old Roberto Tobias Jr. thinks a lot about his parents these days. 
+
+> His mom, Loida, was a nurse at Harlem Hospital.
 
 
 https://www.gofundme.com/f/lost-parents-due-to-covid-need-funds-for-college

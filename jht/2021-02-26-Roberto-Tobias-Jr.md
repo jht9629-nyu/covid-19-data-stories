@@ -22,3 +22,5 @@ https://www.ny1.com/nyc/all-boroughs/news/2020/07/21/queens-teen-loses-both-pare
 https://www.gofundme.com/f/lost-parents-due-to-covid-need-funds-for-college
 
 https://gofund.me/7df62474
+
+![](https://images.gofundme.com/E17AjJPzFejuDaAYM9KutjT3B2s=/720x405/https://d2g8igdw686xgo.cloudfront.net/49599008_1594602528333595_r.jpeg)

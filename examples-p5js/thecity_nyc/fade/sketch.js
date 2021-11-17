@@ -7,9 +7,14 @@ let a_fast_n = 30;
 let a_monoc = 1;
 let a_mask = 1;
 let images_prefix = '../images/';
-let fade_count = 30*5;
-let fade_delta = 1;
+let fade_count_secs = 4;
+let fade_count = 0;
 let fade_index = 0;
+let fade_delta = 1;
+let hold_count_secs = 3;
+let hold_count;
+let hold_index = 0;
+let tval;
 
 function setup() {
   createCanvas(800, 800);
@@ -17,10 +22,20 @@ function setup() {
   // frameRate(a_fps);
   // background(0);
   sketch_ui();
+  console.log('frameRate()', frameRate());
 }
 
 function draw() {
+  if (!fade_count) {
+    let fr = Math.round(frameRate());
+    fade_count = fade_count_secs * fr;
+    hold_count = hold_count_secs * fr;
+  }
   if (!a_run) return;
+  draw_step();
+}
+
+function draw_step() {
   load_next();
   draw_next();
 }
@@ -51,8 +66,12 @@ function draw_next() {
   fade_index += fade_delta;
   if (fade_delta > 0) {
     if (fade_index >= fade_count) {
-      fade_index = fade_count;
-      fade_delta = -fade_delta;
+      hold_index++;
+      if (hold_index > hold_count) {
+        fade_index = fade_count;
+        fade_delta = -fade_delta;
+        hold_index = 0;
+      }
     }
   } else {
     // fade_delta less than zero
@@ -64,10 +83,15 @@ function draw_next() {
   }
   let rec = a_recs[tint_index];
   tint_index += step;
-  let tval = map(fade_index, 0, fade_count, 0, 255);
+  // let tval = map(fade_index, 0, fade_count, 0, 255);
+  tval = map(fade_index, 0, fade_count, 0, 255, true);
+  tval = Math.floor(tval);
+  // console.log('tval', tval);
   tint(255, tval);
   image(rec.img, 0, 0, width, height);
-  show_text('msg', rec.d + ' ' + rec.e);
+  let msg = rec.d + ' ' + rec.e;
+  // msg += ' ' + tval;
+  show_text('msg', msg);
 }
 
 function load_reset() {

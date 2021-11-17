@@ -38,6 +38,11 @@ function sketch_ui() {
       load_reset();
     });
   }
+  createButton('step').mousePressed(function () {
+    draw_step();
+    a_run = 0;
+    console.log('tval', tval);
+  });
   createP();
 }
 

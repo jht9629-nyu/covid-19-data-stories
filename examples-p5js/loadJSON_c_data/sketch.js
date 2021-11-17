@@ -5,7 +5,7 @@
 let a_data;
 let a_index;
 let a_zip = '11234';
-let a_location = 'in Brooklyn ' + a_zip;
+let a_location = 'Brooklyn ' + a_zip;
 let a_num;
 let a_points;
 let a_font;
@@ -84,8 +84,8 @@ function show_at_index() {
   msg = ' On ' + itm.on + '<br>';
   msg += '<span style="font-size:40px" >';
   msg += itm.Deaths + '</span><br>';
-  msg += ' People have died';
-  msg += ' ' + a_location;
+  msg += ' Total deaths ';
+  msg += ' in ' + a_location;
   show_text('msg', msg);
   a_num = itm.Deaths;
   a_points = null;

@@ -1,6 +1,7 @@
 function load_image(rec) {
   loadImage(rec.fpath, (img) => {
-    console.log(a_recs.length, 'loadImage', rec.fpath);
+    // console.log(a_recs.length, 'loadImage', rec.fpath);
+    // console.log('img.width', img.width, 'img.height', img.height);
     if (a_monoc) mono_img(img);
     if (a_mask) mask_img(img);
     rec.img = img;

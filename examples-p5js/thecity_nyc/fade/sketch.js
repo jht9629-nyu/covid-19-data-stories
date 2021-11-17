@@ -15,6 +15,7 @@ let hold_count_secs = 3;
 let hold_count;
 let hold_index = 0;
 let tval;
+let fps_fixed = 30;
 
 function setup() {
   createCanvas(800, 800);
@@ -23,11 +24,14 @@ function setup() {
   // background(0);
   sketch_ui();
   console.log('frameRate()', frameRate());
+  setFrameRate(fps_fixed);
 }
 
 function draw() {
   if (!fade_count) {
-    let fr = Math.round(frameRate());
+    // let fr = Math.round(frameRate());
+    let fr = fps_fixed;
+    console.log('fr', fr);
     fade_count = fade_count_secs * fr;
     hold_count = hold_count_secs * fr;
   }
@@ -101,3 +105,5 @@ function load_reset() {
   tint_index = 0;
   sketch_ui();
 }
+
+// consider sharing libraries/p5.min.js

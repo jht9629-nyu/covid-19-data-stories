@@ -10,6 +10,7 @@ function sketch_ui() {
     elm.attribute('target', '_blank');
     elm.style('font-size', '20px');
   }
+  if (!show_ui) return;
   createP();
   {
     let btn = createButton('Full');
@@ -52,11 +53,13 @@ function ui_panel() {
 }
 function show_text(label, text) {
   let elm = select('#' + label);
+  if (!elm) return;
   elm.html(text);
 }
 
 function show_num(label, num) {
   let elm = select('#' + label);
+  if (!elm) return;
   num = round(num, 2);
   elm.html('[' + label + ' ' + num + '] ');
 }

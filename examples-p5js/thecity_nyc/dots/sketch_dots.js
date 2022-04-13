@@ -35,6 +35,7 @@ function draw() {
     cycle_count = 0;
     present_index = (present_index + 1) % a_recs.length;
     a_img = null;
+    background(back_color);
     return;
   }
   for (let bub of a_bubbles) {

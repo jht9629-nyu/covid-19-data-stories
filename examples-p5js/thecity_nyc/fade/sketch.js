@@ -4,7 +4,7 @@ let tint_index = 0;
 let a_run = 1;
 let a_fast = 0;
 let a_fast_n = 30;
-let a_monoc = 1;
+let a_monoc = 0;
 let a_mask = 1;
 let images_prefix = '../images/';
 let fade_count_secs = 4;
@@ -16,6 +16,7 @@ let hold_count;
 let hold_index = 0;
 let tval;
 let fps_fixed = 30;
+let show_ui = 0;
 
 function setup() {
   createCanvas(800, 800);
@@ -55,7 +56,9 @@ function load_next() {
     let arr = rec.h.split('/');
     let fname = arr[arr.length - 1];
     rec.fpath = images_prefix + fname;
-    rec.himg = createImg(rec.fpath, 'image');
+    if (show_ui) {
+      rec.himg = createImg(rec.fpath, 'image');
+    }
     load_image(rec);
   }
 }

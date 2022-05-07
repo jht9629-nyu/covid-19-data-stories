@@ -14,6 +14,7 @@ let present_index = 0;
 let cycle_count = 0;
 let cycle_limit = 10000;
 // let cycle_limit = 1000;
+let cycle_background_reset = 1;
 
 function setup() {
   // print('setup img', a_img)
@@ -35,7 +36,9 @@ function draw() {
     cycle_count = 0;
     present_index = (present_index + 1) % a_recs.length;
     a_img = null;
-    background(back_color);
+    if (cycle_background_reset) {
+      background(back_color);
+    }
     return;
   }
   for (let bub of a_bubbles) {

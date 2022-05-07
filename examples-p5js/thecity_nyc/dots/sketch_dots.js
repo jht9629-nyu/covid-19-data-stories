@@ -1,6 +1,6 @@
 let a_bubbles = [];
 let a_alpha = 60;
-let n_start = 20;
+let n_start = 40;
 let a_canvas;
 let save_count = 0;
 // let a_select_color;
@@ -22,7 +22,7 @@ function setup() {
   a_canvas = createCanvas(800, 800);
   background(back_color);
   add_bubbles(n_start);
-  // init_ui();
+  sketch_ui();
   load_next();
 }
 
@@ -48,7 +48,11 @@ function draw() {
 
 function select_img() {
   if (present_index < a_recs.length) {
-    a_img = a_recs[present_index].img;
+    let rec = a_recs[present_index];
+    a_img = rec.img;
+    let msg = rec.d + ' ' + rec.e;
+    // msg += ' ' + tval;
+    show_text('msg', msg);
   }
 }
 

@@ -11,39 +11,39 @@ function sketch_ui() {
     elm.style('font-size', '20px');
   }
   createP();
-  {
-    let btn = createButton('Full');
-    btn.mousePressed(function () {
-      toggleFullScreen();
-    });
-  }
-  {
-    let btn = createButton('Run');
-    btn.mousePressed(function () {
-      a_run = !a_run;
-    });
-  }
-  {
-    let btn = createButton('Fast');
-    btn.mousePressed(function () {
-      a_fast = !a_fast;
-      frameRate(a_fast ? a_fast_n : 1);
-      console.log('a_fast', a_fast, 'a_fast_n', a_fast_n);
-    });
-  }
-  {
-    let btn = createButton('monoc');
-    btn.mousePressed(function () {
-      a_monoc = !a_monoc;
-      load_reset();
-    });
-  }
-  createButton('step').mousePressed(function () {
-    draw_step();
-    a_run = 0;
-    console.log('tval', tval);
-  });
-  createP();
+  // {
+  //   let btn = createButton('Full');
+  //   btn.mousePressed(function () {
+  //     toggleFullScreen();
+  //   });
+  // }
+  // {
+  //   let btn = createButton('Run');
+  //   btn.mousePressed(function () {
+  //     a_run = !a_run;
+  //   });
+  // }
+  // {
+  //   let btn = createButton('Fast');
+  //   btn.mousePressed(function () {
+  //     a_fast = !a_fast;
+  //     frameRate(a_fast ? a_fast_n : 1);
+  //     console.log('a_fast', a_fast, 'a_fast_n', a_fast_n);
+  //   });
+  // }
+  // {
+  //   let btn = createButton('monoc');
+  //   btn.mousePressed(function () {
+  //     a_monoc = !a_monoc;
+  //     load_reset();
+  //   });
+  // }
+  // createButton('step').mousePressed(function () {
+  //   draw_step();
+  //   a_run = 0;
+  //   console.log('tval', tval);
+  // });
+  // createP();
 }
 
 function ui_panel() {

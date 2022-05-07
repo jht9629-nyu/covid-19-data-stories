@@ -1,6 +1,6 @@
 let a_bubbles = [];
 let a_alpha = 60;
-let n_start = 40;
+let n_start = 100;
 let a_canvas;
 let save_count = 0;
 // let a_select_color;
@@ -12,9 +12,15 @@ let images_prefix = '../images/';
 let a_recs = [];
 let present_index = 0;
 let cycle_count = 0;
-let cycle_limit = 10000;
+let cycle_limit = 3000;
+// let cycle_limit = 10000;
 // let cycle_limit = 1000;
 let cycle_background_reset = 1;
+let a_state = 'count';
+let a_start = Date.now();
+let wait_lapse = 5 * 1000;
+let count_lapse = 30 * 1000;
+let a_lapse;
 
 function setup() {
   // print('setup img', a_img)
@@ -31,18 +37,50 @@ function draw() {
     select_img();
     return;
   }
-  cycle_count++;
-  if (cycle_count > cycle_limit) {
-    cycle_count = 0;
-    present_index = (present_index + 1) % a_recs.length;
-    a_img = null;
-    if (cycle_background_reset) {
-      background(back_color);
-    }
-    return;
+  switch (a_state) {
+    case 'count':
+      state_cycle();
+      break;
+    case 'wait':
+      state_wait();
+      break;
   }
+}
+
+function state_wait() {
+  let now = Date.now();
+  a_lapse = now - a_start;
+  if (a_lapse > wait_lapse) {
+    a_start = now;
+    a_state = 'count';
+    state_next();
+  }
+}
+
+function state_cycle() {
+  cycle_count++;
+  let now = Date.now();
+  a_lapse = now - a_start;
+  if (a_lapse > count_lapse) {
+    a_start = now;
+    a_state = 'wait';
+  } else {
+    state_draw();
+  }
+}
+
+function state_draw() {
   for (let bub of a_bubbles) {
     draw_bubble(bub);
+  }
+}
+
+function state_next() {
+  cycle_count = 0;
+  present_index = (present_index + 1) % a_recs.length;
+  a_img = null;
+  if (cycle_background_reset) {
+    background(back_color);
   }
 }
 

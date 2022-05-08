@@ -13,14 +13,18 @@ let a_recs = [];
 let present_index = 0;
 let cycle_count = 0;
 let cycle_limit = 3000;
+let cycle_damp = 0.1;
 // let cycle_limit = 10000;
 // let cycle_limit = 1000;
 let cycle_background_reset = 1;
 let a_state = 'count';
 let a_start = Date.now();
-let wait_lapse = 5 * 1000;
+let hold_lapse = 5 * 1000;
+let fade_down_lapse = 30 * 1000;
+let fade_hold_lapse = 5 * 1000;
 let count_lapse = 30 * 1000;
 let a_lapse;
+let show_gallery_images = 0;
 
 function setup() {
   // print('setup img', a_img)
@@ -41,19 +45,46 @@ function draw() {
     case 'count':
       state_cycle();
       break;
-    case 'wait':
-      state_wait();
+    case 'hold':
+      state_hold();
+      break;
+    case 'fade_down':
+      state_fade_down();
+      break;
+    case 'fade_hold':
+      state_fade_hold();
       break;
   }
 }
 
-function state_wait() {
+function state_fade_hold() {
   let now = Date.now();
   a_lapse = now - a_start;
-  if (a_lapse > wait_lapse) {
+  if (a_lapse > fade_hold_lapse) {
     a_start = now;
     a_state = 'count';
     state_next();
+  }
+}
+
+function state_fade_down() {
+  let now = Date.now();
+  a_lapse = now - a_start;
+  if (a_lapse > fade_down_lapse) {
+    a_start = now;
+    a_state = 'fade_hold';
+  } else {
+    state_draw(1);
+  }
+}
+
+function state_hold() {
+  let now = Date.now();
+  a_lapse = now - a_start;
+  if (a_lapse > hold_lapse) {
+    a_start = now;
+    a_state = 'fade_down';
+    // state_next();
   }
 }
 
@@ -63,15 +94,20 @@ function state_cycle() {
   a_lapse = now - a_start;
   if (a_lapse > count_lapse) {
     a_start = now;
-    a_state = 'wait';
+    a_state = 'hold';
   } else {
     state_draw();
   }
 }
 
-function state_draw() {
+function state_draw(backColor) {
+  let count = 0;
   for (let bub of a_bubbles) {
-    draw_bubble(bub);
+    count++;
+    if (count > cycle_count * cycle_damp) {
+      return;
+    }
+    draw_bubble(bub, backColor);
   }
 }
 
@@ -108,6 +144,9 @@ function load_next() {
     let fname = arr[arr.length - 1];
     rec.fpath = images_prefix + fname;
     rec.himg = createImg(rec.fpath, 'image');
+    if (!show_gallery_images) {
+      rec.himg.hide();
+    }
     load_image(rec);
   }
 }
@@ -157,9 +196,9 @@ function add_bubble_mouseXY() {
   print('add_bubble_mouseXY', a_bubbles.length);
 }
 
-function draw_bubble(bub) {
+function draw_bubble(bub, backColor) {
   move_bubble(bub);
-  show_bubble(bub);
+  show_bubble(bub, backColor);
 }
 
 function move_bubble(bub) {
@@ -182,11 +221,16 @@ function move_bubble(bub) {
   // print('x', x, 'y', y)
 }
 
-function show_bubble(bub) {
+function show_bubble(bub, backColor) {
   // let col = bub.gray;
   let x = int(bub.x / a_scale);
   let y = int(bub.y / a_scale);
-  let col = a_img.get(x, y);
+  let col;
+  if (backColor) {
+    col = [back_color, back_color, back_color];
+  } else {
+    col = a_img.get(x, y);
+  }
   col[3] = bub.alpha;
   // stroke(col, bub.alpha);
   strokeWeight(0);

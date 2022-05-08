@@ -166,13 +166,19 @@ function move_bubble(bub) {
   let r = bub.r;
   let x = int(bub.x);
   x = x - (x % r);
-  x = x + random([-1, 0, 1]) * r;
+  // x = x + random([-1, 0, 1]) * r;
   let y = int(bub.y);
   y = y - (y % r);
-  y = y + random([-1, 0, 1]) * r;
+  // y = y + random([-1, 0, 1]) * r;
+  y = y + random([0, 1]) * r;
   // constrain(n, low, high)
   bub.x = constrain(x, 0, width);
-  bub.y = constrain(y, 0, height);
+  // bub.y = constrain(y, 0, height);
+  bub.y = y;
+  if (bub.y > height) {
+    bub.y = 0;
+    bub.x = random(0, width);
+  }
   // print('x', x, 'y', y)
 }
 

@@ -1,7 +1,13 @@
+let elm_mimage;
 function sketch_ui() {
   {
     let elm = createSpan().id('msg');
     elm.style('font-size', '20px');
+  }
+  createP();
+  {
+    elm_mimage = createImg('', 'image').id('mimage');
+    elm_mimage.hide();
   }
   createP();
   {

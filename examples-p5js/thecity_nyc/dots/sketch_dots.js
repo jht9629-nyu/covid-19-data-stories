@@ -127,6 +127,9 @@ function select_img() {
     let msg = rec.d + ' ' + rec.e;
     // msg += ' ' + tval;
     show_text('msg', msg);
+    if (elm_mimage) {
+      elm_mimage.attribute('src', rec.fpath);
+    }
   }
 }
 

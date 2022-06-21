@@ -1,6 +1,7 @@
 # covid-19-data-stories
 
 ## The COVID-19 Impact Project: Extracting Stories From Data
+
 A NYU-ITP 1-unit course meeting for three Fridays in Feburary 2021.
 
 [Course Overview](./COVID-19-NYU-ITP-Course-Overview.pdf)
@@ -18,3 +19,8 @@ https://epvisual.com/COVID-19-Impact/Project/
 
 https://epvisual.com/COVID-19-Impact/Dashboard/a0/
 
+## thecity_nyc
+
+### dots
+
+https://jht9629.github.io/covid-19-data-stories/examples-p5js/thecity_nyc/dots/

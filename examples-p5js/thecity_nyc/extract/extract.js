@@ -10,7 +10,7 @@ function extract_img() {
       hn++;
     }
   });
-  console.log('hn', hn);
+  // console.log('hn', hn);
 }
 
 extract_img();
@@ -23,6 +23,7 @@ extract_img();
 // https://projects.thecity.nyc/covid-19-deaths/
 // a_refs created by running scrape_refs in console
 // All / Sort youngest
+// Scroll to bottom to get all images loaded
 // [] better names
 function scrape_refs() {
   let m = document.querySelectorAll('li');
@@ -52,3 +53,4 @@ function scrape_refs() {
 }
 // q.length – 1963 – "hn" – 230
 // q.length 2582 hn 361
+// q.length 2631 hn 456
